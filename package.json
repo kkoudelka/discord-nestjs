@@ -12,8 +12,8 @@
     "type": "git",
     "url": "https://github.com/fjodor-rybakov/discord-nestjs"
   },
-  "main": "dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "dist/packages/index.js",
+  "typings": "./dist/packages/index.d.ts",
   "files": [
     "dist/**/*",
     "*.md"
