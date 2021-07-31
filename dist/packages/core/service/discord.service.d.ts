@@ -1,0 +1,30 @@
+import { OnApplicationBootstrap, OnApplicationShutdown } from '@nestjs/common';
+import { Client, WebhookClient } from 'discord.js';
+import { DiscordModuleOption } from '../interface/discord-module-option';
+import { DiscordModuleCommandOptions } from '../interface/discord-module-command-options';
+import { PipeType } from '../util/type/pipe-type';
+import { GuardType } from '../util/type/guard-type';
+export declare class DiscordService implements OnApplicationBootstrap, OnApplicationShutdown {
+    private readonly clientToken;
+    private readonly commandPrefix;
+    private readonly allowGuilds?;
+    private readonly denyGuilds?;
+    private readonly allowCommands?;
+    private readonly pipeList?;
+    private readonly guardList?;
+    private readonly client;
+    private readonly webhookClient;
+    private readonly logger;
+    constructor(options: DiscordModuleOption);
+    onApplicationBootstrap(): Promise<void>;
+    onApplicationShutdown(): void;
+    getCommandPrefix(): string;
+    getAllowCommands(): DiscordModuleCommandOptions[];
+    getClient(): Client;
+    getWebhookClient(): WebhookClient;
+    getPipes(): PipeType[];
+    getGuards(): GuardType[];
+    isAllowGuild(guildId: string): boolean;
+    isDenyGuild(guildId: string): boolean;
+    private createWebhookClient;
+}
