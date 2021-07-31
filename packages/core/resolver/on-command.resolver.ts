@@ -39,7 +39,6 @@ export class OnCommandResolver implements MethodResolver {
     if (!metadata) {
       return;
     }
-    this.logger.setContext(instance.constructor.name);
     const {
       name,
       prefix = this.discordService.getCommandPrefix(),
