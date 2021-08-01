@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "class-transformer": "0.4.0",
-    "class-validator": "0.13.1"
+    "class-validator": "https://github.com/kkoudelka/class-validator.git"
   },
   "devDependencies": {
     "@nestjs/cli": "7.6.0",
@@ -78,7 +78,6 @@
     "@nestjs/common": "^8.0.5",
     "@nestjs/core": "^8.0.5",
     "class-transformer": "0.4.0",
-    "class-validator": "0.13.1",
     "discord.js": "^12.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.3"
